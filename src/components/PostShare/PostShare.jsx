@@ -30,10 +30,10 @@ export const PostShare = () => {
                     </div>
                     <div className="options" style={{color: "var(--schedule"}}>
                         <UilSchedule/>
-                        
-                            Schedule
+                             Schedule
                         
                     </div>
+                    <button className='btnFollow ps-button'>Share</button>
                 </div>
             </div>
     </div>
