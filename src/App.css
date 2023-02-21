@@ -28,3 +28,18 @@
   background: #f6b663;
   filter: blur(72px);
 }
+.btnFollow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--buttonBg);
+    transition: all 100ms ease-out;
+}
+.btnFollow:hover{
+  cursor: pointer;
+  color: var(--orange);
+  background: transparent;
+}
