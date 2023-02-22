@@ -3,7 +3,7 @@ import ProfileImage from '../../img/profileImg.jpg'
 import './PostShare.css'
 import {UilScenery,UilPlayCircle,UilLocationPoint,UilSchedule, UilTimes} from "@iconscout/react-unicons"
 import { Posts } from '../Posts/Posts'
-
+import { Icon } from '@iconify/react';
 export const PostShare = () => {
     const [image, setImage] = useState(null);
     const imageRef = useRef();
@@ -47,7 +47,7 @@ export const PostShare = () => {
                              Schedule
                         
                     </div>
-                    <button className='btnFollow ps-button'>Share</button>
+                    <button className='btnFollow ps-button'><Icon icon="uil:share" />Share</button>
                     <div style={{display:"none"}}>
                         <input 
                         type="file" 

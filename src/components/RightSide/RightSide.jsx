@@ -1,7 +1,27 @@
 import React from 'react'
+import './RightSide.css'
+import Home from '../../img/home.png'
+import Noti from '../../img/noti.png'
+import Comment from '../../img/comment.png'
+import {UilSetting} from '@iconscout/react-unicons'
+import { TrendCard } from '../../components/TrendCard/TrendCard'
+import { Icon } from '@iconify/react';
 
 export const RightSide = () => {
   return (
-    <div>RightSide</div>
+    <div className="RightSide">
+      <div className="navIcons">
+      <img src={Home} alt="" />
+      <UilSetting/>
+      <img src={Noti} alt="" />
+      <img src={Comment} alt="" />
+      </div>
+      <TrendCard/>
+
+      <button className='btnFollow r-button'>
+      <Icon icon="uil:share" /> Share
+      </button>
+
+    </div>
   )
 }
