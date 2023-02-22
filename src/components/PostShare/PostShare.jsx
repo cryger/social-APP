@@ -2,13 +2,14 @@ import React, {useState, useRef} from 'react'
 import ProfileImage from '../../img/profileImg.jpg'
 import './PostShare.css'
 import {UilScenery,UilPlayCircle,UilLocationPoint,UilSchedule, UilTimes} from "@iconscout/react-unicons"
+import { Posts } from '../Posts/Posts'
 
 export const PostShare = () => {
     const [image, setImage] = useState(null);
     const imageRef = useRef();
 
     const onImageChange = (event) =>{
-        if(event.target.files && EventTarget.target.files[0]){
+        if(event.target.files && event.target.files[0]){
             let img = event.target.files[0];
             setImage({
                 image: URL.createObjectURL(img),
@@ -48,17 +49,25 @@ export const PostShare = () => {
                     </div>
                     <button className='btnFollow ps-button'>Share</button>
                     <div style={{display:"none"}}>
-                        <input type="file" name='myImage' ref={imageRef} onChange={onImageChange}/>
+                        <input 
+                        type="file" 
+                        name="myImage"
+                        ref={imageRef} 
+                        onChange={onImageChange}/>
                     </div>
                 </div>
-                {image &&
+            {image &&
                     <div className="previewImage">
                         <UilTimes onClick={()=>setImage(null)}/>
                         <img src={image.image} alt="" />
+                        
                     </div>
-                }
+            }
+                <Posts/>
             </div>
+            
     </div>
+
     
 
 
